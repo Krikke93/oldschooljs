@@ -8,7 +8,7 @@ const OreTable = new LootTable()
 	.add('Adamantite ore', 1, 3)
 	.add('Runite ore', 1, 1);
 
-const OrePackTable = new LootTable().every(OreTable, 30);
+const OrePackTable = new LootTable().oneIn(100, 'Dragon pickaxe (broken)').add(OreTable, 30);
 
 export default new SimpleOpenable({
 	id: 27_019,
